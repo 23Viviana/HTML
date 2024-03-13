@@ -1,0 +1,280 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100%; /*adaptable altura a cualqueir fdispositivo*/
+}
+body{
+    font-family: tahoma;
+    font-size: 18px;
+    background-image: url(../img/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*seccion cabecera*/
+#header{
+    background-color: lightskyblue;
+    border: 2px solid blue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;/*css grid header*/
+}
+ul{
+    padding: 0 0;
+    margin: 0 1px;   
+}
+li{
+    list-style: none;
+    margin: 0 5px;
+    font: bold 12px verdana;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+/*seccion nav*/
+#menu{
+    grid-area:nav;/*css grip nav*/
+    background-color: blue;
+    border: 2px solid green;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+/*css submenu*/
+.menuB>li{
+    position: relative;
+    display: inline-block;
+}
+.menuB>li>a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+.menuB li a:hover{
+    color: lightgreen;
+    transition: all .3s;
+}
+.submenu{
+    position: absolute;
+    background: blue;
+    width: 120px;
+    display: none;
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+/*Estilos con pseudoclase hover en opcioones de menu*/
+.menuB li:hover .submenu{ 
+    display: block;/*se depliege sub menu de menumarcado*/
+    z-index: 100;
+}
+/*estilos a buscador*/
+.buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding: 5px;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: 0.8s ease;
+}
+/*efecto hover el pasar mouse en buscador*/
+.buscarbox input:hover{
+    width: 150px;
+    padding-left: 10px;
+    outline: none;/*quitar bordes*/
+}
+/*seccion estilos <section>*/
+#main{
+    grid-area: main;/*CSS grid section*/
+    border: 2px solid greenyellow;
+    max-width: 100%;/*diseño web section*/
+    height: auto;/*diseño wed respopncive*/
+    background-color: rgba(255,255,255,0.6);/*efecto glass*/
+    backdrop-filter: blur(5px);/*efecto glass*/ 
+    border: 2px solid yellowgreen; 
+    
+
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px 5px;
+}
+.programa{
+    display: inline-block;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 15px 15px;
+}
+section article{
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+    margin: 20px;
+    padding: 5px;
+}
+/*seccion estilos barra lateral <aside>*/
+#sidebar{
+    grid-area: sidebar;/* CSS grid aside*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+/*seccion estilos footer*/
+#footer{
+    grid-area: footer;/*CSS grid footer*/
+    padding: 20px;
+    border: 2px solid yellowgreen;
+    border-radius: 20px;
+    clear: both;/*anula flotamientos de contenedores*/
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+    border: 2px solid yellow;
+    border-radius: 20px;
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scaleX(1.5);/*efecto de animacion agrandamiento*/
+}
+/*estilos a iconos fontawesome*/
+i[class^="fa"]{
+    color: dimgray;
+    font-size: 18px;
+}
+i[class^="fab"]{
+
+}
+    /* seccion css grip: diseño web responsive */
+#grid-container > *{
+    text-align: center;
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+     /* css grid contenedor vista pc 3 columnas */
+#grid-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template: 
+    "header header header" 150px
+    "nav nav nav" 50px 
+    "main main sidebar" 300px
+    "main main sidebar" 300px
+    "main main sidebar" 250px
+    "footer footer footer" 150px /
+    1250px 150px 300px;
+}
+/*seccion css grid vista de tablets 2 columnas */
+@media (max-width:1024px){
+ #grid-container{
+    grid-template:
+    "header header" 170px
+    "nav main" 800px
+    "nav main" 700px
+    "sidebar sidebar" 100px 
+    "footer footer" 100px/
+    250px 450px;
+    font-size: 75%;/*cambia tamaño de fuente*/ 
+}
+#menu {
+    background-color: blue;
+    border-radius: 22px;
+    display: block;
+    padding: 45px;
+    margin: 40px;
+    height: auto;
+    text-align: center;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /*auto ajuste al ancho de pantalla*/
+    max-width: 100%;
+
+}
+.programa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black; 
+}
+iframe{
+    max-width: 100%;
+height: auto;
+}
+.buscarbox{
+    display: block;
+    padding: 5px;
+}
+}
+/* seccion css grid vista de celular 1 columna */
+@media (max-width:640px){
+    #grid-container{
+        grid-template:
+        "header" 150px
+        "nav" 50px
+        "sidebar" 800px
+        "footer" 100px/
+        500px;
+        font-size: 60%; 
+    }
+    #menu{
+        display: none;/*oculta barra <nav>*/
+    }
+    #main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+    }
+    .programa{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 100%;
+        border: 1px solid black; 
+    }
+    iframe{
+        <element class="buscarbox">
+        selector specificity:(0,1,0)
+        .buscarbox{
+            display: none;
+        }
+    }
+}
