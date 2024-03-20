@@ -1,0 +1,232 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100%; /*adaptable altura a cualqueir dispositivo*/
+}
+body{
+    font-family: tahoma;
+    font-size: 18px;
+    background-image: url(../img/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*SECCION CSS <HEADER>*/
+#header{
+    background-color: rgb(191, 223, 243);
+    border: 2px solid black;
+    border-radius: 22px;
+    display: flex;/*Tecnica para posicionamiento de elementos*/
+    flex-direction: row;/*en fila*/
+    justify-content: center;/*alinear horizontal*/
+    align-items: center;/*alinear vertical*/
+    grid-area:header;/*nombre CSS GRID del <header>*/
+}
+ul{
+    padding: 0 0;
+    margin: 0 1px;   
+}
+li{
+    list-style: none;/Borrar viñetas/
+    margin: 0 5px;
+    font: bold 12px verdana;
+}
+a{
+    color: black;
+    text-decoration: none;/*Quitar subrayado*/
+}
+/*SECCION CSS <NAV>*/
+#menu{
+    grid-area:nav;/*nombre CSS GRID del <nav>*/
+    background-color: rgb(191, 223, 243);
+    border: 2px solid black;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+/*seccion css menu y submenu*/
+.menuB>li{
+    position: relative;
+    display: inline-block;
+}
+.menuB>li>a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+.menuB li a:hover{
+    color: black;
+    transition: all .3s;
+}
+.submenu{
+    position: absolute;
+    background: rgb(191, 223, 243);
+    width: 120px;
+    display: none;
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+/*Estilos con pseudoclase hover en opcioones de menu*/
+.menuB li:hover .submenu{ 
+    display: block;/*se depliege sub menu de menumarcado*/
+    z-index: 100;
+}
+/*estilos a buscador*/
+.buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding: 0px;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: 0.8s ease;
+}
+/*efecto hover el pasar mouse en buscador*/
+.buscarbox input:hover{
+    width: 150px;
+    padding-left: 10px;
+    outline: none;/*quitar bordes*/
+}
+/*seccion estilos <section>*/
+#main{
+    grid-area: main;/*CSS grid section*/
+    border: 2px solid black;
+    max-width: 100%;/*diseño web section*/
+    height: auto;/*diseño wed respopncive*/
+    background-color: rgba(255,255,255,0.6);/*efecto glass*/
+    backdrop-filter: blur(5px);/*efecto glass*/ 
+    border: 2px solid black; 
+    
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px 5px;
+}
+.programa{
+    display: inline-block;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 15px 15px;
+}
+section article{
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+    margin: 20px;
+    padding: 5px;
+}
+/*seccion estilos barra lateral <aside>*/
+#sidebar{
+    grid-area: sidebar;/* CSS grid aside*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+/*seccion estilos footer*/
+#footer{
+    grid-area: footer;/*CSS grid footer*/
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    clear: both;/*anula flotamientos de contenedores*/
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+    border: 2px solid black;
+    border-radius: 20px;
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scaleX(1.5);/*efecto de animacion agrandamiento*/
+}
+/*estilos a iconos fontawesome*/
+i[class^="fa"]{
+    color: dimgray;
+    font-size: 18px;
+}
+i[class^="fab"]{
+}
+/* SECCION DE CSS GRID PARA DISEÑO WEB RESPONSIVE */
+/*VISTA PC : 3 COLUMNAS */
+#grid-container > *{
+    text-align: center;
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+#grid-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template: 
+    "header header header" 150px
+    "nav nav nav" 50px 
+    "main main sidebar" 300px
+    "main main sidebar" 300px
+    "main main sidebar" 250px
+    "footer footer footer" 150px /
+    1250px 150px 300px;
+}
+/* SECCION VISTA CELULAR: 1 COLUMNA */
+@media(max-width:640px){
+    #grid-container{
+        grid-template: 
+        "header" 150px
+        "nav" 50px 
+        "main" 1120px
+        "sidebar"800px
+        "footer" 100px /
+        500px; 
+        font-size: 60%;
+    }
+    #menu{
+        display:none;/*Para ocultar*/
+    }
+    #main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+    }
+    .programa{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid black;
+    }
+    iframe{
+        max-width: 100%;
+        height: auto;
+    }
+    .buscarbox{
+        display: none;
+    }
+}
