@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METODO ONCHANGE</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/ONCHANGE.css">
+</head>
+<body>
+    <center>
+        <div>
+            <h1>BOTON TOGGLE DARK - LIGHT</h1>
+            <h2>EVENTO CHANGE - ADDEVENTLISTENER</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vero aut recusandae eligendi ipsam praesentium ea non? Reprehenderit corrupti veniam in obcaecati inventore, ipsam ab eaque accusantium eligendi excepturi sapiente.
+            </p>  
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia error, amet quasi esse quo dolorum odio consequuntur harum quae dolore officiis explicabo corporis inventore hic ea quidem eveniet saepe delectus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci inventore nulla pariatur voluptas quaerat eos culpa? Minima voluptate fuga illo quidem, natus, consequuntur non dolores assumenda eveniet culpa laudantium impedit.</p>
+            <br><br>
+            <!-- seccion de boton toggle dark - light -->
+            <input type="checkbox" class="checkbox" id="chk"/>
+            <label class="label" for="chk">
+                <i class="fas fa-sun"></i><!-- icono sol -->
+                <i class="fas fa-moon"></i><!-- icono luna -->
+                <div class="ball"></div>
+            </label>
+        </div>
+    </center>
+    <script>
+        let.chk=document.getElementById('chk');
+        chk.addEventListener('change',()=>{
+            document.body.classList.toggle('dark'); // en CSS esta body dark
+        })
+    </script>
+    <script src="./JS/TOGGLE DARK LIGHT.js"></script>
+</body>
+</html>

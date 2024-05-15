@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRONOMETRO</title>
+    <link rel="stylesheet" href="./CSS/CRONOMETRO.css">
+
+</head>
+<body>
+    <div id="principal">
+        <table>
+            <tr><td>CRONOMETRO DIGITAL</td>
+            </tr>
+            <tr>
+                <td>Hora</td>
+                <td>Minutos</td>
+                <td>Segundos</td>
+                <td>Milesimas</td>
+            </tr>
+            <tr>
+                <td><input type="text" value="0" id="hora" class="cajon"></td>
+                <td><input type="text" value="0" id="minutos" class="cajon"></td>
+                <td><input type="text" value="0" id="segundos" class="cajon"></td>
+                <td><input type="text" value="0" id="milesimas" class="cajon"></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <table>
+                        <tr>
+                            <td><input type="button" value="Iniciar" class="botones" onclick="cronometro()"></td>
+                            <td><input type="button" value="Detener" class="botones" onclick="parar()"></td>
+                            <td><input type="button" value="Reiniciar" class="botones" onclick="reiniciar()"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="./JS/CRONOMETRO.js"></script>
+</body>
+</html>
