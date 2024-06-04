@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head><html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TRAVEL AGENCY</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- link fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/CATALOGO.css">
+</head>
+<body>
+<!-- MAIN -->
+<div class="color"></div>
+<div class="main">
+<h1>CATALOGO TRAVEL AGENCY</h1> 
+<hr>
+<h2>PORTAFOLIO DE TIENDA ONLINE</h2>
+	<header class="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-5 header-logo">
+					<br>
+					<a href="index.html"><img src="./img/logo.jpg"class="img-responsive logo" height="100px" width="100px"></a>
+				</div>
+
+				<div class="col-md-7">
+					<nav class="navbar navbar-default">
+					  <div class="container-fluid nav-bar">
+					   
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					    </div>
+
+					    
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					      
+					      <ul class="nav navbar-nav navbar-right">
+					        <li><a class="menu" href="index.html" >NOSOTROS</a></li>
+					        <li><a class="menu" href="nosotros.html">TOURES</a></li>
+					        <li><a class="menu" href="productos.html">PAQUETES</a></li>
+					        <li><a class="menu" href="contacto.html"> CONTACTENOS</a></li>
+					        <li><a class="menu active" href="catalogo.html"> CATALOGO</a></li>
+					      </ul>
+					    </div>
+					  </div>
+					</nav>
+				</div>
+			</div>
+		</div>
+<div id="myBtnContainer">
+<button class="btn active" onclick="filterSelection('all')"> Todos</button>
+<button class="btn" onclick="filterSelection('computador')"> Trajes de Baño</button>
+<button class="btn" onclick="filterSelection('celular')"> Accesorios</button>
+<button class="btn" onclick="filterSelection('ropa')">Recuerdos</button>
+</div>
+<div id="toggle"><!-- CAMBIO-->
+<input type="checkbox" class="checkbox" id="chk" />
+<label class="label" for="chk">
+    <i class="fas fa-sun"></i>
+    <i class="fas fa-moon"></i>
+    <div class="ball"></div>
+</label>
+</div>
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+<!-- Portfolio Gallery Grid  taje de baño -->
+<div class="column computador">
+    <div class="content">
+    <img src="./img/Traje de baño - familia.jpeg" alt="" style="width:250px;height:230px;">
+    <h4>Traje de Baño para familia</h4>
+    <p>cuatro trajes de baño 2 adultos 2 niños 
+        valor: 160.000 Pesos 
+    </p>
+    </div>
+</div>
+<div class="column computador">
+    <div class="content">
+    <img src="./img/Traje de baño - pareja.jpeg" alt="" style="width:250px;height:230px;">
+    <h4>Traje de Baño para Pareja"</h4>
+    <p>Dos Trajes de Baño 
+        Valor: 95.000 Pesos
+    </p>
+    </div>
+</div>
+<div class="column computador">
+    <div class="content">
+    <img src="./img/Traje de baño - Caballero.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Traje de baño para Hombre</h4>
+    <p>Valor: 40.000 Pesos</p>
+    </div>
+</div>
+<div class="column computador">
+    <div class="content">
+    <img src="./img/Traje de baño - dama.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Traje de Baño para Dama</h4>
+    <p>Valor: 70.000</p>
+    </div>
+</div>
+<div class="column computador">
+    <div class="content">
+    <img src="./img/Traje de baño - niño.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Traje de Baño para Niño"</h4>
+    <p>Valor: 40.000 Pesos</p>
+    </div>
+</div>
+<div class="column computador">
+    <div class="content">
+    <img src="./img/Traje de baño - niña.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Traje de Baño para Niña"</h4>
+    <p>Valor: 50.000 Pesos</p>
+    </div>
+</div>
+    <!-- Portfolio Gallery Grid  Celular -->
+<div class="column celular">
+    <div class="content">
+    <img src="./img/Gafas- accesorio.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Gafas para Hombre</h4>
+    <p>20.000 Pesos</p>
+    </div>
+</div>
+<div class="column celular">
+    <div class="content">
+    <img src="./img/Gafas dama - accesorio.jpeg" style="width:250px;height:250px;">
+    <h4>Gafas para Mujer</h4>
+    <p>20.000 Pesos</p>
+    </div>
+</div>
+<div class="column celular">
+    <div class="content">
+    <img src="./img/Collar - accesorio.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Collar para Hombre</h4>
+    <p>15.000 Pesos</p>
+    </div>
+</div>
+
+<div class="column celular">
+    <div class="content">
+    <img src="./img/Reloj caballero - accesorio.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Reloj paraa Hombre</h4>
+    <p>40.000 Pesos</p>
+    </div>
+</div>
+<div class="column celular">
+    <div class="content">
+    <img src="./img/Reloj dama - accesorio.jpeg" style="width:250px;height:250px;">
+    <h4>Reloj para Mujer</h4>
+    <p>40.000 Pesos</p>
+    </div>
+</div>
+<div class="column celular">
+    <div class="content">
+    <img src="./img/Collar dama- accesorio.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Collar para Dama</h4>
+    <p>20.000</p>
+    </div>
+</div>
+
+</div>
+    <!-- Portfolio Gallery Grid  Ropa -->
+<div class="column ropa">
+    <div class="content">
+    <img src="./img/Vela recuerdo.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Vela Recuerdo</h4>
+    <p>Valor: 20.000 Pesos</p>
+    </div>
+</div>
+<div class="column ropa">
+    <div class="content">
+    <img src="./img/Recuerdo almejas.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Recuerdo Almejas</h4>
+    <p>20.000 Pesos</p>
+    </div>
+</div>
+<div class="column ropa">
+    <div class="content">
+    <img src="./img/Concgha recuerdo.jpeg" alt="" style="width:250px;height:250px;">
+    <h4>Concha Recuerdo</h4>
+    <p>Valor: 20.000 Pesos</p>
+    </div>
+</div>
+<!-- END GRID -->
+</div>
+<!-- END MAIN -->
+</div>
+<script  src="./js/CATALOGO.js"></script>
+</body>
+</html>
